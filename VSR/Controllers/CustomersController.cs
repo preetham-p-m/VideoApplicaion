@@ -34,5 +34,11 @@ namespace VSR.Controllers
 
             return View(customer);
         }
+
+        // New Customer Page
+        public ActionResult New()
+        {
+            return View();
+        }
     }
 }

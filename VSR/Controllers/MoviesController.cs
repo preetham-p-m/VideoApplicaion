@@ -18,6 +18,8 @@ namespace VSR.Controllers
         {
             _context.Dispose();
         }
+
+        // Index Page
         public ViewResult Index()
         {
             var movies = _context.Movies.ToList();
@@ -25,6 +27,7 @@ namespace VSR.Controllers
             return View(movies);
         }
 
+        // Movie Detail Page
         public ActionResult Details(int id)
         {
             var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
